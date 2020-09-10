@@ -10,7 +10,7 @@ function respondJson(req, res) {
   res.setHeader('Content-Type', 'application/json')
   res.end(
     JSON.stringify({
-      text: "Oh Hey There, Here's some fucking JSON",
+      text: "Oh Hey There, Here's some JSON",
       numbers: [1, 2, 3],
     })
   )
