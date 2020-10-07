@@ -1,30 +1,15 @@
 const express = require('express')
 const path = require('path')
+const members = require('./Members')
+const logger = require('./middleware/logger')
 
 const app = express()
 
-const members = [
-  {
-    id: 1,
-    name: 'Jane Doe',
-    email: 'JaneDoe@gmail.com',
-    status: 'active',
-  },
-  {
-    id: 2,
-    name: 'Jebadiah Doesephius',
-    email: 'J.Doesephius@hotmail.com',
-    status: 'inactive',
-  },
-  {
-    id: 3,
-    name: 'David Icke',
-    email: 'LizardBoy@yahoo.com',
-    status: 'active',
-  },
-]
+//Use middleware
+app.use(logger)
 
-app.get('/api/members', (req, res) => {})
+//Gets all members
+app.get('/api/members', (req, res) => res.json(members))
 
 //Set static folder
 app.use(express.static(path.join(__dirname, 'public')))
