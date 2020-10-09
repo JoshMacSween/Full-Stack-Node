@@ -1,4 +1,3 @@
-
 const members = [
   {
     id: 1,
@@ -17,7 +16,7 @@ const members = [
     name: 'David Icke',
     email: 'LizardBoy@yahoo.com',
     status: 'active',
-  },
+  }
 ]
 
 module.exports = members
