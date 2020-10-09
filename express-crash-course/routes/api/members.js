@@ -38,6 +38,7 @@ router.post('/', (req, res) => {
 
   members.push(newMember)
   res.json(members)
+  // res.redirect('/') use to get redirect from form
 })
 
 //Update member
